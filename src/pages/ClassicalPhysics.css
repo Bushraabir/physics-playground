@@ -1,0 +1,323 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background: #000;
+    /* Dark Theme Background */
+    color: #e5e7eb;
+    /* Light Gray Text */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* Header Styling */
+
+header {
+    background: rgba(30, 41, 59, 0.9);
+    /* Semi-transparent dark */
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(108, 99, 255, 0.8);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* 3D Model Section */
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1e293b, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Content Cards */
+/* Content Cards */
+.card {
+    width: 100%;
+    max-width: 1000px;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(40, 0, 40, 0.8)); /* Premium black-purple gradient */
+    border: 1.5px solid rgba(128, 0, 128, 0.4); /* Subtle purple border for elegance */
+    border-radius: 24px; /* Luxurious rounded corners */
+    backdrop-filter: blur(25px); /* Glassmorphic effect */
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.8), 
+        0 15px 45px rgba(128, 0, 128, 0.4); /* Dual-layered shadow for sophistication */
+    padding: 3rem; /* Spacious content area */
+    position: relative;
+    overflow: hidden;
+    transition: 
+        transform 0.4s ease, 
+        box-shadow 0.4s ease, 
+        background 0.4s ease, 
+        filter 0.4s ease;
+    animation: fadeIn 1.2s ease-in-out;
+    z-index: 1;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400%;
+    height: 400%;
+    background: radial-gradient(circle, rgba(128, 0, 128, 0.1), rgba(0, 0, 0, 0)); /* Subtle radial purple overlay */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.25;
+    animation: pulse 6s infinite, gradientShift 8s infinite;
+    filter: blur(80px);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03); /* Gentle hover effect */
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.9), 
+        0 20px 50px rgba(128, 0, 128, 0.6); /* Deepened shadow for hover */
+    border: 2px solid rgba(128, 0, 128, 0.6); /* Enhanced border on hover */
+    filter: brightness(1.15) contrast(1.25); /* Subtle brightening and contrast */
+}
+
+/* Text Styling */
+.card h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif; /* Luxurious serif font for headings */
+    color: #e5dbf5; /* Elegant soft lavender */
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
+    text-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.6), 
+        0 3px 8px rgba(128, 0, 128, 0.4); /* Premium glow effect */
+    animation: fadeInSlide 1.5s ease-out;
+}
+
+.card p {
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif; /* Clean sans-serif for body text */
+    color: #c8b8e5; /* Soft lavender for readability */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
+    animation: fadeInText 1.8s ease-in-out;
+}
+
+.card a {
+    color: #bf40bf; /* Vibrant purple link for accents */
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    position: relative;
+    display: inline-block;
+    transition: 
+        color 0.4s ease, 
+        transform 0.4s ease;
+}
+
+.card a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #bf40bf, #e5dbf5); /* Gradient underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.card a:hover {
+    color: #e5dbf5; /* Soft lavender on hover */
+    transform: translateX(8px); /* Gentle slide effect */
+}
+
+.card a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Advanced Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.25;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background: radial-gradient(circle, rgba(128, 0, 128, 0.1), rgba(0, 0, 0, 0));
+    }
+    100% {
+        background: radial-gradient(circle, rgba(80, 0, 80, 0.2), rgba(0, 0, 0, 0));
+    }
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Text Glow Hover Effect */
+.card h2:hover {
+    text-shadow: 
+        0 5px 20px rgba(128, 0, 128, 0.8), 
+        0 3px 10px rgba(255, 255, 255, 0.6); /* Premium glow effect */
+}
+
+
+
+
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8b5cf6;
+    /* Purple accent */
+    margin-bottom: 1rem;
+}
+
+.card a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.card a:hover {
+    color: #a78bfa;
+    transform: translateX(5px);
+}
+
+
+/* Footer */
+
+footer {
+    background: rgba(17, 24, 39, 0.9);
+    color: #d1d5db;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+
+/* Animations */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .overlay-text p {
+        font-size: 1.2rem;
+    }
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .overlay-text {
+        padding: 0.8rem 1.5rem;
+    }
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
