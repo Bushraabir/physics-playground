@@ -9,4 +9,5 @@ export default defineConfig({
             '/apply-forces': 'http://localhost:8000',
         },
     },
+    base:'/physics-playground/'
 })
