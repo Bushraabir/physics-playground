@@ -46,7 +46,7 @@ const chapters = [
     title: ' Statics',
     description: 'about statics',
     links: [
-      { label: 'Balanced Force on Rigid Bodies', path: '/classical/statics/balanced-force-on-rigid-body' },
+      { label: 'Balanced Force on Rigid Bodies', path: '/physics-playground/classical/statics/balanced-force-on-rigid-body' },
       { label: 'Balanced Torques', path: '/equilibrium' },
       { label: 'Center of Mass and Centroid', path: '/torques' },
       { label: 'Trusses and Frames', path: '/center-of-mass' },

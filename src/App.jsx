@@ -8,7 +8,7 @@ import ClassicalPhysics from './pages/ClassicalPhysics';
 import ModernPhysics from './pages/ModernPhysics';
 import LinearMotion from './pages/classical/motion/LinearMotion/LinearMotion';
 import HomePage from './pages/HomePage';
-import BalncedForceOnRigidBody from './pages/classical/statics/BalncedForceOnRigidBody';
+import BalancedForceOnRigidBody from './pages/classical/statics/BalncedForceOnRigidBody';
 
 const App = () => {
   return (
@@ -20,12 +20,12 @@ const App = () => {
         <Route path="/physics-playground/contact" element={<Contact />} />
         <Route path="/physics-playground/classical-physics" element={<ClassicalPhysics />} />
         <Route path="/physics-playground/modern-physics" element={<ModernPhysics />} />
-        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalncedForceOnRigidBody />} />
+
         <Route path="/physics-playground/classical/motion/linear-motion" element={<LinearMotion />} />
 
         {/* Classical Physics */}
         {/* Statics */}
-        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalncedForceOnRigidBody />} />
+        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalancedForceOnRigidBody />} />
 
         {/* Classical Physics - Motion */}
         <Route path="/physics-playground/classical/motion/linear-motion" element={<LinearMotion />} />
