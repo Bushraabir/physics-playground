@@ -13,5 +13,5 @@ export default defineConfig({
       },
     },
   },
- 
+  base: '/physics-playground/',
 });

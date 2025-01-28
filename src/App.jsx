@@ -15,18 +15,20 @@ const App = () => {
     <Router>
       <Routes>
         {/* Main Routes */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/classical-physics" element={<ClassicalPhysics />} />
-        <Route path="/modern-physics" element={<ModernPhysics />} />
+        <Route path="/physics-playground/" element={<HomePage />} />
+        <Route path="/physics-playground/about" element={<About />} />
+        <Route path="/physics-playground/contact" element={<Contact />} />
+        <Route path="/physics-playground/classical-physics" element={<ClassicalPhysics />} />
+        <Route path="/physics-playground/modern-physics" element={<ModernPhysics />} />
+        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalncedForceOnRigidBody />} />
+        <Route path="/physics-playground/classical/motion/linear-motion" element={<LinearMotion />} />
 
         {/* Classical Physics */}
         {/* Statics */}
-        <Route path="/classical/statics/balanced-force-on-rigid-body" element={<BalncedForceOnRigidBody />} />
+        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalncedForceOnRigidBody />} />
 
         {/* Classical Physics - Motion */}
-        <Route path="/classical/motion/linear-motion" element={<LinearMotion />} />
+        <Route path="/physics-playground/classical/motion/linear-motion" element={<LinearMotion />} />
 
         {/* Fallback for undefined routes */}
         <Route path="*" element={<h2>Page not found</h2>} />
