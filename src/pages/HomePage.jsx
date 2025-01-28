@@ -84,42 +84,42 @@ function HomePage() {
 
           {/* Call to Action Buttons with Icon Effects */}
           <motion.div className="flex justify-center gap-10 mt-12">
-          <Link to="/physics-playground/classical-physics"  className="btn-primary">
-                                                       
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="flex items-center gap-4 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 transform rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:shadow-xl hover:scale-105"
-              >
-                <FaPlay className="text-2xl" />
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4, duration: 0.8 }}
-                >
-                  Start with Classical Physics
-                </motion.span>
-              </motion.div>
-            </Link>
+          <Link to="/physics-playground/classical-physics" className="btn-primary">
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ duration: 0.3 }}
+    className="flex items-center gap-4 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 transform rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:shadow-xl hover:scale-105"
+  >
+    <FaPlay className="text-2xl" />
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.8 }}
+    >
+      Start with Classical Physics
+    </motion.span>
+  </motion.div>
+</Link>
 
-            <Link to="/physics-playground/modern-physics" className="btn-secondary">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="flex items-center gap-4 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 transform rounded-lg bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 hover:shadow-xl hover:scale-105"
-              >
-                <FaAtom className="text-2xl" />
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                >
-                  Dive into Modern Physics
-                </motion.span>
-              </motion.div>
-            </Link>
+<Link to="/physics-playground/modern-physics" className="btn-secondary">
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ duration: 0.3 }}
+    className="flex items-center gap-4 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 transform rounded-lg bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 hover:shadow-xl hover:scale-105"
+  >
+    <FaAtom className="text-2xl" />
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.8 }}
+    >
+      Dive into Modern Physics
+    </motion.span>
+  </motion.div>
+</Link>
+
           </motion.div>
         </motion.div>
       </main>

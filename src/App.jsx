@@ -21,14 +21,9 @@ const App = () => {
         <Route path="/physics-playground/classical-physics" element={<ClassicalPhysics />} />
         <Route path="/physics-playground/modern-physics" element={<ModernPhysics />} />
 
-        <Route path="/physics-playground/classical/motion/linear-motion" element={<LinearMotion />} />
-
         {/* Classical Physics */}
-        {/* Statics */}
-        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalancedForceOnRigidBody />} />
-
-        {/* Classical Physics - Motion */}
         <Route path="/physics-playground/classical/motion/linear-motion" element={<LinearMotion />} />
+        <Route path="/physics-playground/classical/statics/balanced-force-on-rigid-body" element={<BalancedForceOnRigidBody />} />
 
         {/* Fallback for undefined routes */}
         <Route path="*" element={<h2>Page not found</h2>} />
