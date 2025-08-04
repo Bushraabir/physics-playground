@@ -8,8 +8,6 @@ import 'react-vertical-timeline-component/style.min.css'; // Import timeline sty
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 
-import './ClassicalPhysics.css';
-
 // Reusable Card Component
 const Card = ({ title, description, links }) => (
   <motion.div
