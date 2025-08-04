@@ -1,0 +1,62 @@
+# Build output
+/dist/
+/build/
+
+# Vite cache
+/.vite/
+
+# Dependency directories
+/.pnpm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE or editor folders
+.vscode/
+.idea/
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# React build files
+*.tgz
+
+# Next.js build
+.next/
+
+# TypeScript build directory
+/tsconfig.tsbuildinfo
+# Dependency directories
+node_modules/
+.pnpm/
+
+# Build outputs
+dist/
+build/
+
+# Caches
+.vite/
+.npm/
+.yarn/
+.cache/
+*.log
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,367 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* Use a modern, clean font */
+}
+
+
+/* Body Styling */
+
+body {
+    background-color: #0f0f0f;
+    /* Dark background for the app */
+    color: #f5f5f5;
+    /* Light text */
+    overflow-x: hidden;
+    font-size: 16px;
+    /* Default font size for the body */
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+header nav h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #ccc;
+    margin-left: 2rem;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+
+/* Container for background image */
+
+.motion-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* Ensure background is behind content */
+    transition: background-position 10s ease infinite;
+}
+
+
+/* Animation for background movement */
+
+@keyframes backgroundMovement {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+/* Apply the animation */
+
+.motion-background.animate {
+    animation: backgroundMovement 10s infinite alternate;
+}
+
+
+/* Hero Section */
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10rem;
+    /* Space for fixed header */
+    position: relative;
+}
+
+main .text-center {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.motion-div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.motion-div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.motion-div div:hover {
+    background: linear-gradient(45deg, #0056b3, #4e00d6);
+    transform: scale(1.1);
+}
+
+.motion-div div svg {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+
+/* Background Image */
+
+motion.div.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* Ensure it stays behind other elements */
+}
+
+
+/* Why Learn Physics Section */
+
+section {
+    padding: 4rem 0;
+    background: linear-gradient(to right, #000000, rgba(0, 0, 0, 0.6));
+    color: #f5f5f5;
+    backdrop-filter: blur(10px);
+}
+
+section h2 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+section p {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+section .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+section .grid div {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.3s ease;
+}
+
+section .grid div:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+section .grid div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section .grid div h3 {
+    font-size: 1.875rem;
+    color: white;
+    font-weight: 700;
+}
+
+section .grid div p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+
+/* Featured Simulations Section */
+
+.featured-simulations {
+    padding: 4rem 0;
+    background: #1a1a1a;
+    color: white;
+}
+
+.featured-simulations h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.featured-simulations p {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.featured-simulations .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.featured-simulations .grid div {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.3s ease;
+}
+
+.featured-simulations .grid div:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.featured-simulations .grid div h3 {
+    font-size: 1.875rem;
+    color: white;
+    font-weight: 700;
+}
+
+.featured-simulations .grid div p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.featured-simulations .grid div a {
+    color: #4c6ef5;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.featured-simulations .grid div a:hover {
+    color: #2a4d9c;
+}
+
+
+/* Join Us Section */
+
+.join-us {
+    padding: 4rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.join-us h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.join-us p {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.join-us a {
+    background: linear-gradient(45deg, #00b894, #0984e3);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.join-us a:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #02a676, #1e6fd4);
+}
+
+
+/* Reusable Button Styles */
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: rgb(194, 212, 130);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(83, 64, 64, 0.377);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
